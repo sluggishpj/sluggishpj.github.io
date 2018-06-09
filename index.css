@@ -1,0 +1,81 @@
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(1px);
+    z-index: -200;
+    background-color: #105BA1;
+    background-image: url(https://gitee.com/sluggish/music/raw/master/one.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.head {
+    text-align: center;
+    opacity: 0.2;
+}
+
+#container {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-70%);
+}
+
+span {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-item {
+    transition: all ease .2s;
+}
+.menu-item:hover {
+    transform: scale(1.2);
+}
+
+header {
+    text-align: center;
+}
+
+#nameSvg {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.title {
+    /*放大倍数，及条件内部字体与所在svg距离*/
+    font-family:'Bauhaus 93';
+    transform: scale(5) translateX(-23px) translateY(-12%);
+    stroke-dasharray: 61;
+    stroke-dashoffset: 61;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    animation: draw 4s ease forwards;
+    -inkscape-font-specification:'Bauhaus 93, Normal';
+    fill:#fff;
+    fill-opacity:0;
+    stroke: #fff;
+    stroke-opacity: 0.14;
+}
+@keyframes draw {
+    from {
+        stroke-dashoffset: -61;
+        stroke-dasharray: 61;
+    }
+    to {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 61;
+    }
+}
