@@ -79,3 +79,12 @@ header {
         stroke-dasharray: 61;
     }
 }
+
+.test-google-ad {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 320px;
+  height: 250px;
+}
